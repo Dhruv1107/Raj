@@ -1,0 +1,17 @@
+<button mat-button routerLink="/table" routerLinkActive="active">Back to table</button>
+<form [formGroup]="form" (submit)="submitForm()">
+          <div class="form-group" *ngFor="let dummy of ' '.repeat(numParams).split(''); let inputIndex = index;">
+            <label [for]="getInputName(inputIndex)">{{getInputName(inputIndex)}}</label>
+            <input
+                [formControlName]="getInputBoxName(inputIndex)"
+              [type]="text"
+              [name]="getInputBoxName(inputIndex)"
+            />
+          </div>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+    <div *ngIf="submitted"><pre>{{form.value | json}}</pre></div>
+  </form>
+  
+
+
+
