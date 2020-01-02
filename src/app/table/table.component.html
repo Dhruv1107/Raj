@@ -6,7 +6,7 @@
   </ng-container>
   <ng-container matColumnDef="Name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-    <td mat-cell *matCellDef="let element; let i = index" (click)="click(i)">{{ element.Name }}</td>
+    <td mat-cell *matCellDef="let element; let i = index" (click)="click(element.Id)">{{ element.Name }}</td>
   </ng-container>
 
   <ng-container matColumnDef="Mnemonic">

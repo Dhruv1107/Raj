@@ -17,7 +17,7 @@ constructor(private router: Router){}
   ngOnInit() {
     this.dataSource.sort = this.sort;
   }
-  click(index: number){
+  click(index){
     this.router.navigate(['/dynamicForm', {index}]);
   }
 }
